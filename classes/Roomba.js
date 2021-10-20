@@ -1,11 +1,20 @@
 class Roomba {
-  constructor(startX, startY, theRoom) {
+  constructor(startX, startY, theDirections, theRoom) {
     this.positionX = startX;
     this.positionY = startY;    
+    this.directions = theDirections;
     this.room = theRoom;
   }
 
-  navigateRoom = (direction) => {
+  navigateRoom = () => {
+    for (let j = 0; j < this.directions.length; j++){
+        for (let k = 0; k < this.directions[j].length; k++){
+          this.navigateToNextPosition(this.directions[j][k]);
+        }
+      }
+  }
+
+  navigateToNextPosition = (direction) => {
       switch(direction){
           case 'N':
               if (this.positionY < this.room.roomLengthIndex){
