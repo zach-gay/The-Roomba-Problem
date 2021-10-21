@@ -3,7 +3,7 @@ A program about a lonely imaginary robotic hoover that wakes up trapped in an im
 
 
 # Testing Instructions
-1. Read/perform the steps found in the Prerequisites section.
+1. Read/perform the steps found in the **Prerequisites** section below.
 2. After cloning the repository, navigate in the command prompt to the directory in which you cloned the repo.
 3. Run the command `npm install`. This will install all dependencies needed to run the program.
 4. You are now ready to run the program. Run `node TheRoombaProblem.js <file-name>` where `<file-name>` is a text file containing the roomba problem information. This text file must live in the root of the repository. An example is included with the repository called `input.txt`. To run this example, run `node TheRoombaProblem.js input.txt`.
