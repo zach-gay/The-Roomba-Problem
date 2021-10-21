@@ -39,7 +39,7 @@ createRoomba = (file) => {
         startingPosition = lines[1].split(' ').map((element) => {
             return parseInt(element);
         });
-        if (startingPosition.length != 2) {
+        if (startingPosition.length != 2 || startingPosition[0] >= roomDimensions[0] || startingPosition[1] >= roomDimensions[1]) {
             console.log("Starting Position not valid: " + line);
             process.exit(1);
         }
@@ -56,12 +56,14 @@ createRoomba = (file) => {
                 directions.push(lines[i]);
             }
             else {
-                let dirtPatchPosition = lines[i].split(' ');
-                if (dirtPatchPosition.length != 2) {
+                let dirtPatchPosition = lines[i].split(' ').map((element) => {
+                    return parseInt(element);
+                });
+                if (dirtPatchPosition.length != 2 || dirtPatchPosition[0] >= roomDimensions[0] || dirtPatchPosition[1] >= roomDimensions[1]) {
                     console.log("Dirt Patch Position not valid on line number " + i);
                     process.exit(1);
                 }
-                dirtPatchPositions.set(parseInt(dirtPatchPosition[0]) + " " + parseInt(dirtPatchPosition[1]), true);
+                dirtPatchPositions.set(dirtPatchPosition[0] + " " + dirtPatchPosition[1], true);
             }
         }
     } catch (err) {
