@@ -1,0 +1,23 @@
+{
+  "name": "the-roomba-problem",
+  "version": "1.0.0",
+  "description": "the roomba problem dependencies",
+  "main": "TheRoombaProblem.js",
+  "dependencies": {
+    "line-reader-sync": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zach-gay/The-Roomba-Problem.git"
+  },
+  "author": "zach gay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zach-gay/The-Roomba-Problem/issues"
+  },
+  "homepage": "https://github.com/zach-gay/The-Roomba-Problem#readme"
+}
